@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Sample sales data
+data = {
+    "Month": ["Jan", "Feb", "Mar", "Apr", "May"],
+    "Revenue": [12000, 15000, 17000, 16000, 20000],
+    "Cost": [8000, 9000, 11000, 10000, 13000]
+}
+
+df = pd.DataFrame(data)
+
+# Basic Dashboard: Only shows revenue
+plt.figure(figsize=(8,5))
+plt.bar(df["Month"], df["Revenue"], color="skyblue")
+plt.title("Monthly Revenue")
+plt.xlabel("Month")
+plt.ylabel("Revenue ($)")
+plt.show()
